@@ -1,0 +1,11 @@
+%h1
+  =@faculty.name
+
+
+%dl
+  %br
+  -@fac_chairs.map do |fac|
+    %ul
+      %li
+        %b=fac.name
+= link_to 'Назад', faculties_path

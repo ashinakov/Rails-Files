@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Number:
+  = @chair.number
+%p
+  %b Id faculty:
+  = @chair.faculty_id
+%p
+  %b Name:
+  = @chair.name
+
+= link_to 'Edit', edit_chair_path(@chair)
+\|
+= link_to 'Back', chairs_path

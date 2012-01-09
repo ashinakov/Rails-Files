@@ -1,0 +1,9 @@
+#aside.box
+  %ul.box
+    %li= link_to 'Факультеты', faculties_path
+    %li= link_to 'Преподаватели', teachers_path
+    %li= link_to 'Студенты', students_path
+    %li= link_to 'Группы', groups_path
+    %li= link_to 'Пожелания', wishes_path
+
+

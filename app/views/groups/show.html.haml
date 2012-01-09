@@ -1,0 +1,14 @@
+%h1 
+  %b Группа:
+  %b=@group.number
+
+
+%dl
+  %br
+  -@gro_teachers.map do |gro|
+    %ul
+      %li
+        %b=gro.l_name
+        %b=gro.f_name
+        %b=gro.s_name
+= link_to 'Назад', groups_path

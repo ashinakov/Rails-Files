@@ -1,0 +1,16 @@
+%h1 Listing teachers
+
+%table
+  - @teachers.each do |teacher|
+    %tr
+      %td= teacher.f_name
+      %td= teacher.s_name
+      %td= teacher.l_name
+      %td= teacher.id_chair
+      %td= link_to 'Show', teacher
+      %td= link_to 'Edit', edit_teacher_path(teacher)
+      %td= link_to 'Destroy', teacher, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Teacher', new_teacher_path

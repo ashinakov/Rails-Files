@@ -1,0 +1,16 @@
+%h1 Список студентов
+
+%table
+  - @students.each do |student|
+    %tr
+      %td= student.l_name
+      %td= student.f_name
+      %td= student.s_name
+      %td= student.group.number
+      %td= link_to 'Show', student
+      %td= link_to 'Edit', edit_student_path(student)
+      %td= link_to 'Destroy', student, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Student', new_student_path

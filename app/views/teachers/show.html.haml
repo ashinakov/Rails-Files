@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b F name:
+  = @teacher.f_name
+%p
+  %b S name:
+  = @teacher.s_name
+%p
+  %b L name:
+  = @teacher.l_name
+%p
+  %b Id chair:
+  = @teacher.id_chair
+
+= link_to 'Edit', edit_teacher_path(@teacher)
+\|
+= link_to 'Back', teachers_path

@@ -1,0 +1,19 @@
+= form_for @chair do |f|
+  -if @chair.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@chair.errors.count, "error")} prohibited this chair from being saved:"
+      %ul
+        - @chair.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :id_faculty
+    = f.select :id_faculty,Faculty.all.map{|fa| [fa.short_name,fa.id]}
+  .field
+    = f.label :number
+    = f.text_field :number
+  .field
+    = f.label :name
+    = f.text_field :name
+  .actions
+    = f.submit 'Save'
